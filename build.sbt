@@ -67,3 +67,10 @@ ghpages.settings
 
 git.remoteRepo := "git@github.com:labra/turtleparser-with-combinators.git"
 
+/* The following line is to download test files from W3c.
+   It would be better to do it only when there is internet connection 
+   */
+resourceGenerators in Test <+= Def.task {
+  val location = url("http://www.w3.org/2013/TurtleTests/TESTS.zip")
+  IO.unzipURL(location, resourceManaged.value / "downloadedTests").toSeq
+}
