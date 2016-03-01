@@ -17,23 +17,26 @@ lazy val turtleparser = crossProject.
     scalaVersion := "2.11.7", 
     organization := "es.weso",
 	libraryDependencies ++= Seq(
-	  "org.scala-lang.modules" %%% "scala-parser-combinators" % "1.0.4"
-	, "org.scalatest" %%% "scalatest" % "3.0.0-M15" % "test"
+     "org.scalatest" %%% "scalatest" % "3.0.0-M15" % "test"
 	)
   ).
   jvmSettings(
     name := name.value + "-jvm",
 	libraryDependencies ++= Seq(
-      "es.weso" % "stateparser-jvm_2.11" % "0.1.0"
-	, "es.weso" % "SRDF-jvm_2.11" % "0.0.5"
+      "es.weso" % "stateparser_2.11" % "0.1.1"
+	, "es.weso" % "srdf-jvm_2.11" % "0.0.5"
+    , "commons-configuration" % "commons-configuration" % "1.7"
+    , "com.typesafe" % "config" % "1.2.0"
+    , "org.apache.jena" % "jena-arq" % "2.13.0" % "test"
+    , "junit" % "junit" % "4.10" % "test"
     ),
 	licenses += ("MPL-2.0", url("http://opensource.org/licenses/MPL-2.0"))
   ).
   jsSettings(
     name := name.value + "-js",
 	libraryDependencies ++= Seq(
-      "es.weso" % "stateparser-js_2.11" % "0.1.0"
-	, "es.weso" % "SRDF-js_2.11" % "0.0.5"
+      "es.weso" % "stateparser_sjs0.6_2.11" % "0.1.2"
+	, "es.weso" % "srdf-js_sjs0.6_2.11" % "0.0.5"
     ),
 	licenses += ("MPL-2.0", url("http://opensource.org/licenses/MPL-2.0"))
   )
