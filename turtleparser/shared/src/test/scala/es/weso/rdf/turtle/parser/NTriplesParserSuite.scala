@@ -6,7 +6,7 @@ import scala.io.Source
 
 import es.weso.rdf.nodes._
 import scala.util.parsing.input.CharArrayReader
-import es.weso.rdf.triples.RDFTriple
+import es.weso.rdf.triples._
 
 class NTriplesParserSuite extends FunSuite with NTriplesParser {
 

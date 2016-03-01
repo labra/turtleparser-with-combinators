@@ -17,20 +17,23 @@ lazy val turtleparser = crossProject.
     scalaVersion := "2.11.7", 
     organization := "es.weso",
 	libraryDependencies ++= Seq(
-	  "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.4"
-    , "es.weso" % "stateparser_2.11" % "0.1.0"
+	  "org.scala-lang.modules" %%% "scala-parser-combinators" % "1.0.4"
 	, "org.scalatest" %%% "scalatest" % "3.0.0-M15" % "test"
 	)
   ).
   jvmSettings(
     name := name.value + "-jvm",
 	libraryDependencies ++= Seq(
+      "es.weso" % "stateparser-jvm_2.11" % "0.1.0"
+	, "es.weso" % "SRDF-jvm_2.11" % "0.0.5"
     ),
 	licenses += ("MPL-2.0", url("http://opensource.org/licenses/MPL-2.0"))
   ).
   jsSettings(
     name := name.value + "-js",
 	libraryDependencies ++= Seq(
+      "es.weso" % "stateparser-js_2.11" % "0.1.0"
+	, "es.weso" % "SRDF-js_2.11" % "0.0.5"
     ),
 	licenses += ("MPL-2.0", url("http://opensource.org/licenses/MPL-2.0"))
   )
