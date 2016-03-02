@@ -20,6 +20,10 @@ resolvers += Classpaths.sbtPluginReleases
 
 resolvers += "jgit-repo" at "http://download.eclipse.org/jgit/maven"
 
+resolvers += "BintrayLabra" at "https://dl.bintray.com/labra/maven"
+
+resolvers += "Typesafe Repository" at "https://repo.typesafe.com/typesafe/releases/"
+
 resolvers +=  Resolver.url(
   "scala-js-releases", url("http://dl.bintray.com/content/scala-js/scala-js-releases"))(Resolver.ivyStylePatterns)
   
