@@ -20,8 +20,6 @@ resolvers += Classpaths.sbtPluginReleases
 
 resolvers += "jgit-repo" at "http://download.eclipse.org/jgit/maven"
 
-resolvers += "BintrayLabra" at "https://dl.bintray.com/labra/maven"
-
 resolvers += "Typesafe Repository" at "https://repo.typesafe.com/typesafe/releases/"
 
 resolvers +=  Resolver.url(

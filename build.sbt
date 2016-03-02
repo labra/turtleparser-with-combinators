@@ -74,3 +74,5 @@ resourceGenerators in Test <+= Def.task {
   val location = url("http://www.w3.org/2013/TurtleTests/TESTS.zip")
   IO.unzipURL(location, resourceManaged.value / "downloadedTests").toSeq
 }
+
+resolvers += Resolver.bintrayRepo("labra", "maven")
